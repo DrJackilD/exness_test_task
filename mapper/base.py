@@ -4,14 +4,6 @@ class BaseExtractor(object):
         raise NotImplementedError('You need implement `extract` method for {}'.format(self.__class__.__name__))
 
 
-class Field(object):
-
-    def __init__(self, name, transformations, value):
-        self.name = name
-        self.transformations = transformations
-        self.value = value
-
-
 class BaseTransformer(object):
 
     def transform(self, content):
